@@ -1,0 +1,15 @@
+.first-narration-text,
+.second-narration-text,
+.third-narration-text {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  text-align: center;
+  font-size: 32px;
+  opacity: 0;
+}
