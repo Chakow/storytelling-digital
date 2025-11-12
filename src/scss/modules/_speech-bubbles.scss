@@ -1,0 +1,49 @@
+.speech-bubbles {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  .part-1 {
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 30%;
+    }
+  }
+  .part-2 {
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 30%;
+    }
+  }
+  .part-3 {
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    img {
+      width: 30%;
+    }
+    .first-image {
+      transform: translateY(-70%);
+    }
+    .second-image {
+      transform: translateY(40%);
+    }
+  }
+}

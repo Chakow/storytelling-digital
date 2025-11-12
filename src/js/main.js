@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
   setTimeout(function () {
     document.querySelector(".loading-page").remove();
 
-    var timelineIntro = gsap.timeline({
+    var timelineFirstPart = gsap.timeline({
       scrollTrigger: {
-        trigger: ".all",
+        trigger: ".first-part",
         markers: true,
         start: "top top",
         end: "1000%",
@@ -17,32 +17,33 @@ document.addEventListener("DOMContentLoaded", function () {
         scrub: true,
       },
     });
+
     //accueil crevasse
-    timelineIntro.to(".crevasse", {
+    timelineFirstPart.to(".crevasse", {
       scale: 4.5,
       ease: "power2.out",
       duration: 1,
     });
-    timelineIntro.to(".crevasse", {
+    timelineFirstPart.to(".crevasse", {
       display: "none",
       duration: 0,
     });
     //apparition titre
-    timelineIntro.to(".crique", {
+    timelineFirstPart.to(".crique", {
       y: "33%",
       duration: 1,
     });
-    timelineIntro.to(".crique", {
+    timelineFirstPart.to(".crique", {
       y: "33%",
       duration: 1,
     });
     //dsiparition crique et titre
-    timelineIntro.to(".crique", {
+    timelineFirstPart.to(".crique", {
       y: "100%",
       display: "none",
       duration: 1,
     });
-    timelineIntro.to(
+    timelineFirstPart.to(
       "h1",
       {
         y: "-250%",
@@ -52,34 +53,34 @@ document.addEventListener("DOMContentLoaded", function () {
       "<"
     );
     //premier texte narration
-    timelineIntro.to(".first-narration-text", {
+    timelineFirstPart.to(".first-narration-text", {
       opacity: "1",
       duration: 1,
     });
-    timelineIntro.to(".first-narration-text", {
+    timelineFirstPart.to(".first-narration-text", {
       opacity: "1",
       duration: 2,
     });
-    timelineIntro.to(".first-narration-text", {
+    timelineFirstPart.to(".first-narration-text", {
       opacity: "0",
       duration: 1,
     });
     //apparition première famille
-    timelineIntro.to(".first-family", {
+    timelineFirstPart.to(".first-family", {
       y: "0%",
       duration: 1,
     });
-    timelineIntro.to(".second-plan", {
+    timelineFirstPart.to(".second-plan", {
       x: "70%",
       y: "8%",
       duration: 1.5,
     });
     //disparition première famille
-    timelineIntro.to(".second-plan", {
+    timelineFirstPart.to(".second-plan", {
       y: "155%",
       duration: 1,
     });
-    timelineIntro.to(
+    timelineFirstPart.to(
       ".foreground",
       {
         y: "75%",
@@ -87,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       "<"
     );
-    timelineIntro.to(
+    timelineFirstPart.to(
       ".background",
       {
         y: "75%",
@@ -96,36 +97,36 @@ document.addEventListener("DOMContentLoaded", function () {
       "<"
     );
     //changement couleur background
-    timelineIntro.to(
-      ".all",
+    timelineFirstPart.to(
+      ".first-part",
       {
         backgroundColor: "black",
         duration: 1,
       },
       "<"
     );
-    timelineIntro.to(".first-family", {
+    timelineFirstPart.to(".first-family", {
       display: "none",
       duration: 0,
     });
 
     //apparition deuxième famille
 
-    timelineIntro.to(".second-family", {
+    timelineFirstPart.to(".second-family", {
       y: "0%",
       duration: 1,
     });
-    timelineIntro.to(".second-family-second-plan", {
+    timelineFirstPart.to(".second-family-second-plan", {
       x: "-15%",
       y: "7%",
       duration: 2,
     });
     //disparition deuxième famille
-    timelineIntro.to(".second-family-second-plan", {
+    timelineFirstPart.to(".second-family-second-plan", {
       y: "100%",
       duration: 1,
     });
-    timelineIntro.to(
+    timelineFirstPart.to(
       ".second-family-foreground",
       {
         y: "75%",
@@ -133,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       "<"
     );
-    timelineIntro.to(
+    timelineFirstPart.to(
       ".second-family-background",
       {
         y: "75%",
@@ -141,35 +142,110 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       "<"
     );
-    timelineIntro.to(".second-family", {
+    timelineFirstPart.to(".second-family", {
       display: "none",
       duration: 0,
     });
     //deuxième texte narration
-    timelineIntro.to(".second-narration-text", {
+    timelineFirstPart.to(".second-narration-text", {
       opacity: "1",
       duration: 1,
     });
-    timelineIntro.to(".second-narration-text", {
+    timelineFirstPart.to(".second-narration-text", {
       opacity: "1",
       duration: 2,
     });
-    timelineIntro.to(".second-narration-text", {
+    timelineFirstPart.to(".second-narration-text", {
       opacity: "0",
       duration: 1,
     });
     //troisième texte narration
-    timelineIntro.to(".third-narration-text", {
+    timelineFirstPart.to(".third-narration-text", {
       opacity: "1",
       duration: 1,
     });
-    timelineIntro.to(".third-narration-text", {
+    timelineFirstPart.to(".third-narration-text", {
       opacity: "1",
       duration: 2,
     });
-    timelineIntro.to(".third-narration-text", {
+    timelineFirstPart.to(".third-narration-text", {
       opacity: "0",
       duration: 1,
     });
+    //scène tongue
+    timelineFirstPart.to(".tong-scene", {
+      opacity: "1",
+      duration: 1,
+    });
+    timelineFirstPart.to(".tong-scene", {
+      opacity: "1",
+      duration: 2,
+    });
+    timelineFirstPart.to(".tong-scene", {
+      opacity: "0",
+      duration: 1,
+    });
+    //partie bulles textes
+    timelineFirstPart.to(".part-1", {
+      opacity: "1",
+      duration: 1,
+    });
+    timelineFirstPart.to(".part-1", {
+      opacity: "1",
+      duration: 2,
+    });
+    timelineFirstPart.to(".part-1", {
+      opacity: "0",
+      duration: 1,
+    });
+    timelineFirstPart.to(".part-2", {
+      opacity: "1",
+      duration: 1,
+    });
+    timelineFirstPart.to(".part-2", {
+      opacity: "1",
+      duration: 2,
+    });
+    timelineFirstPart.to(".part-2", {
+      opacity: "0",
+      duration: 1,
+    });
+    timelineFirstPart.to(".part-3", {
+      opacity: "1",
+      duration: 1,
+    });
+    timelineFirstPart.to(".part-3", {
+      opacity: "1",
+      duration: 2,
+    });
+    timelineFirstPart.to(".part-3", {
+      opacity: "0",
+      duration: 1,
+    });
+
+    var timelineSecondPart = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".girl-second-part",
+        markers: true,
+        start: "bottom bottom",
+        end: "100%",
+        pin: true,
+        scrub: true,
+      },
+    });
+
+    timelineSecondPart.to(".second-part img", {
+      x: "-100%",
+      duration: 1,
+    });
+
+    timelineSecondPart.to(
+      "body",
+      {
+        backgroundColor: "black",
+        duration: 1,
+      },
+      "<"
+    );
   }, 1000);
 });

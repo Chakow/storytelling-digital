@@ -1,2 +1,14 @@
 .tong-scene {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  opacity: 0;
+  img {
+    width: 60%;
+    position: absolute;
+  }
 }
