@@ -1,19 +1,17 @@
 .buy-part {
   position: relative;
-  z-index: 1000;
   margin-top: 200px;
-  top: 0;
   width: 100vw;
   height: 100vh;
   .chateau-de-sable-svg {
     position: absolute;
     height: 100vh;
-    bottom: 0;
+    bottom: -6;
     right: inherit;
   }
   .description {
     position: absolute;
-    top: 41vh;
+    top: 42vh;
     left: 40vh;
     display: flex;
     width: 363px;
@@ -73,5 +71,6 @@
     color: #fff;
     font-size: 24px;
     font-weight: 400;
+    transform: translateY(100%);
   }
 }

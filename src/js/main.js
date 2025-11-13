@@ -1,7 +1,11 @@
 //import
 import { gsap } from "gsap";
+
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+// ScrollSmoother requires ScrollTrigger
+import { ScrollSmoother } from "gsap/ScrollSmoother";
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 document.addEventListener("DOMContentLoaded", function () {
   setTimeout(function () {
@@ -12,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         trigger: ".first-part",
         markers: true,
         start: "top top",
-        end: "1000%",
+        end: "2000%",
         pin: true,
         scrub: true,
       },
@@ -22,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     timelineFirstPart.to(".crevasse", {
       scale: 4.5,
       ease: "power2.out",
-      duration: 3,
+      duration: 5,
     });
     timelineFirstPart.to(".crevasse", {
       display: "none",
@@ -31,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //apparition titre
     timelineFirstPart.to(".crique", {
       y: "33%",
-      duration: 1,
+      duration: 2,
     });
     timelineFirstPart.to(".crique", {
       y: "33%",
@@ -41,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     timelineFirstPart.to(".crique", {
       y: "100%",
       display: "none",
-      duration: 1,
+      duration: 2,
     });
     timelineFirstPart.to(
       "h1",
@@ -73,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
     timelineFirstPart.to(".second-plan", {
       x: "70%",
       y: "8%",
-      duration: 1.5,
+      duration: 3,
     });
     //disparition première famille
     timelineFirstPart.to(".second-plan", {
@@ -119,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
     timelineFirstPart.to(".second-family-second-plan", {
       x: "-15%",
       y: "7%",
-      duration: 2,
+      duration: 3,
     });
     //disparition deuxième famille
     timelineFirstPart.to(".second-family-second-plan", {
@@ -299,5 +303,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     //BUY PART ANIMATION
+    var timelineBuyPart = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".buy-part",
+        markers: true,
+        start: "bottom bottom",
+        pin: true,
+      },
+    });
+    timelineBuyPart.to(".buy-button", {
+      y: "0%",
+      duration: 0.5,
+      ease: "power2.out",
+    });
   }, 1000);
 });

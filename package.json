@@ -40,7 +40,9 @@
     "sass": "^1.69.5"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
     "gsap": "^3.13.0",
+    "locomotive-scroll": "^4.1.4",
     "vanilla-tilt": "^1.8.1"
   }
 }
