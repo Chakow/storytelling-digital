@@ -1,0 +1,38 @@
+footer {
+  display: flex;
+  width: 100vw;
+  height: 409px;
+  padding: 0 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 268px;
+  background: #fb3589;
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+
+    color: #e8fff9;
+    font-size: 16px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+  }
+  .logo-atrabile {
+    width: 287px;
+    flex-shrink: 0;
+  }
+  .social-network {
+    display: flex;
+    align-items: center;
+    gap: 37px;
+    svg {
+      width: 44px;
+    }
+  }
+}

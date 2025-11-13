@@ -2,11 +2,10 @@
   width: 100vw;
   height: 100vh;
   background-color: black;
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
   .girl-second-part {
     width: 50%;
     position: absolute;

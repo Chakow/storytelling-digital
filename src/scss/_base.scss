@@ -2,10 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Switzer";
-  color: #fb3589;
-  font-size: 56px;
-  font-weight: 400;
 }
 
 a {
@@ -15,4 +11,10 @@ a {
 img,
 video {
   display: block;
+}
+body {
+  font-family: "Switzer";
+  color: #fb3589;
+  font-size: 56px;
+  font-weight: 400;
 }

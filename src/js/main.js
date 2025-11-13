@@ -222,6 +222,23 @@ document.addEventListener("DOMContentLoaded", function () {
       opacity: "0",
       duration: 1,
     });
+    //PARALLAXE EMOTION PART
+
+    // const images = gsap.utils.toArray(".emotion-part img");
+
+    // images.forEach((img, i) => {
+    //   gsap.to(img, {
+    //     yPercent: (i - images.length / 2) * 35, // intensité du décalage (5 = léger)
+    //     ease: "none",
+    //     scrollTrigger: {
+    //       trigger: ".emotion-part",
+    //       start: "top bottom",
+    //       end: "bottom top",
+    //       scrub: 1.5, // inertie fluide (plus grand = plus doux)
+    //     },
+    //   });
+    // });
+    //TIMELINE SECOND PART !!!!!!!!!!!////
 
     var timelineSecondPart = gsap.timeline({
       scrollTrigger: {
@@ -259,5 +276,28 @@ document.addEventListener("DOMContentLoaded", function () {
       opacity: "0",
       duration: 1,
     });
+
+    //TIMELINE THIRD PART !!!!!!!!!!!////
+
+    var timelineThirdPart = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".third-part",
+        markers: true,
+        start: "top top",
+        end: "500%",
+        pin: true,
+        scrub: true,
+      },
+    });
+    timelineThirdPart.to(".second-image-third-part", {
+      x: "5%",
+      duration: 0.2,
+    });
+    timelineThirdPart.to(".second-image-third-part", {
+      x: "-5%",
+      duration: 0.5,
+    });
+
+    //BUY PART ANIMATION
   }, 1000);
 });

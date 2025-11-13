@@ -1,0 +1,77 @@
+.buy-part {
+  position: relative;
+  z-index: 1000;
+  margin-top: 200px;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  .chateau-de-sable-svg {
+    position: absolute;
+    height: 100vh;
+    bottom: 0;
+    right: inherit;
+  }
+  .description {
+    position: absolute;
+    top: 41vh;
+    left: 40vh;
+    display: flex;
+    width: 363px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    font-size: 16px;
+    font-weight: 400;
+    width: 30vw;
+    .autor {
+      font-family: "Switzer";
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+  .cover-and-button {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    gap: 22px;
+    right: 56px;
+    bottom: 0;
+  }
+  .cover {
+    .image {
+      will-change: transform;
+      display: flex;
+      justify-content: end;
+      transform-style: preserve-3d;
+      .cover1 {
+        width: 100%;
+        transform: translateZ(10px);
+      }
+      .cover2 {
+        position: fixed;
+        width: 100%;
+        transform: translateZ(20px);
+      }
+      .cover3 {
+        position: fixed;
+        width: 100%;
+        transform: translateZ(30px);
+      }
+    }
+  }
+  button {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    padding: 27px 20px;
+    justify-content: center;
+    align-items: flex-end;
+    border: 2px solid #fb3589;
+    background: #fb3589;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+  }
+}
