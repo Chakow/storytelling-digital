@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     timelineFirstPart.to(".crevasse", {
       scale: 4.5,
       ease: "power2.out",
-      duration: 1,
+      duration: 3,
     });
     timelineFirstPart.to(".crevasse", {
       display: "none",
@@ -225,27 +225,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var timelineSecondPart = gsap.timeline({
       scrollTrigger: {
-        trigger: ".girl-second-part",
+        trigger: ".second-part",
         markers: true,
         start: "bottom bottom",
-        end: "100%",
+        end: "500%",
         pin: true,
         scrub: true,
       },
     });
 
-    timelineSecondPart.to(".second-part img", {
-      x: "-100%",
-      duration: 1,
+    timelineSecondPart.to(".girl-second-part", {
+      x: "-145%",
+      duration: 3,
     });
 
     timelineSecondPart.to(
-      "body",
+      ".second-part",
       {
-        backgroundColor: "black",
+        backgroundColor: "white",
         duration: 1,
       },
       "<"
     );
+    timelineSecondPart.to(".grave-image", {
+      opacity: "1",
+      duration: 1,
+    });
+    timelineSecondPart.to(".grave-image", {
+      opacity: "1",
+      duration: 2,
+    });
+    timelineSecondPart.to(".grave-image", {
+      opacity: "0",
+      duration: 1,
+    });
   }, 1000);
 });
