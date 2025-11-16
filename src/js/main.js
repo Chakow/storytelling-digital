@@ -74,12 +74,24 @@ document.addEventListener("DOMContentLoaded", function () {
       y: "0%",
       duration: 1,
     });
+    //disparition première famille
     timelineFirstPart.to(".second-plan", {
       x: "70%",
       y: "8%",
       duration: 3,
     });
-    //disparition première famille
+    timelineFirstPart.to(".speech-bubbles-first-family", {
+      opacity: "1",
+      duration: 1,
+    });
+    timelineFirstPart.to(".speech-bubbles-first-family", {
+      opacity: "1",
+      duration: 1,
+    });
+    timelineFirstPart.to(".speech-bubbles-first-family", {
+      opacity: "0",
+      duration: 0.5,
+    });
     timelineFirstPart.to(".second-plan", {
       y: "155%",
       duration: 1,
@@ -125,11 +137,27 @@ document.addEventListener("DOMContentLoaded", function () {
       y: "7%",
       duration: 3,
     });
+    timelineFirstPart.to(
+      ".second-family-dad-looking",
+      {
+        x: "0%",
+        duration: 3,
+      },
+      "<"
+    );
     //disparition deuxième famille
-    timelineFirstPart.to(".second-family-second-plan", {
+    timelineFirstPart.to(".second-family-dad-looking", {
       y: "100%",
       duration: 1,
     });
+    timelineFirstPart.to(
+      ".second-family-second-plan",
+      {
+        y: "100%",
+        duration: 1,
+      },
+      "<"
+    );
     timelineFirstPart.to(
       ".second-family-foreground",
       {
