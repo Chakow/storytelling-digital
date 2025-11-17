@@ -18,7 +18,18 @@ body {
   color: #fb3589;
   font-size: 56px;
   font-weight: 400;
+  height: 100%;
+  // overflow: hidden;
+
   a {
     text-decoration: none;
   }
+}
+
+#smooth-wrapper {
+  overflow: hidden;
+}
+
+#smooth-content {
+  will-change: transform;
 }
