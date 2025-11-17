@@ -67,10 +67,28 @@
     justify-content: center;
     align-items: flex-end;
     border: 2px solid #fb3589;
-    background: #fb3589;
-    color: #fff;
+    background-color: #fb3589;
+    color: white;
     font-size: 24px;
     font-weight: 400;
     transform: translateY(100%);
+    transition: 0.3s;
+    .hover-effect-button-buy-part {
+      background-color: white;
+      transition: 0.3s;
+      position: absolute;
+      width: 0%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+  button:hover {
+    cursor: pointer;
+    color: #fb3589;
+    .hover-effect-button-buy-part {
+      width: 100%;
+    }
   }
 }

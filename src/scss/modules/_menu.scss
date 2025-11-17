@@ -23,6 +23,7 @@
   }
   .menu-buy-button {
     display: flex;
+    position: relative;
     padding: 10px 15px;
     justify-content: center;
     align-items: flex-end;
@@ -30,5 +31,23 @@
     color: #fb3589;
     gap: 10px;
     border: 1px solid #fb3589;
+    transition: 0.3s;
+    .hover-effect-button-menu {
+      z-index: -1;
+      transition: 0.3s;
+      position: absolute;
+      background-color: #fb3589;
+      width: 0%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+  .menu-buy-button:hover {
+    cursor: pointer;
+    .hover-effect-button-menu {
+      width: 100%;
+    }
+    color: white;
   }
 }
