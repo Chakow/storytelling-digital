@@ -37,26 +37,27 @@
     bottom: 0;
   }
   .cover {
-    .image {
-      will-change: transform;
-      display: flex;
-      justify-content: end;
-      transform-style: preserve-3d;
-      .cover1 {
-        width: 100%;
-        transform: translateZ(10px);
-      }
-      .cover2 {
-        position: fixed;
-        width: 100%;
-        transform: translateZ(20px);
-      }
-      .cover3 {
-        position: fixed;
-        width: 100%;
-        transform: translateZ(30px);
-      }
+    justify-content: end;
+    transform-style: preserve-3d;
+    will-change: transform;
+    display: flex;
+    // .image {
+    //   display: flex;
+    .cover1 {
+      width: 100%;
+      transform: translateZ(10px);
     }
+    .cover2 {
+      position: fixed;
+      width: 100%;
+      transform: translateZ(20px);
+    }
+    .cover3 {
+      position: fixed;
+      width: 100%;
+      transform: translateZ(30px);
+    }
+    // }
   }
   button {
     position: relative;
@@ -76,6 +77,7 @@
     .hover-effect-button-buy-part {
       background-color: white;
       transition: 0.3s;
+      animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
       position: absolute;
       width: 0%;
       height: 100%;

@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 // ScrollSmoother requires ScrollTrigger
 import { ScrollSmoother } from "gsap/ScrollSmoother";
+import VanillaTilt from "vanilla-tilt";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -338,6 +339,26 @@ document.addEventListener("DOMContentLoaded", function () {
       ease: "power2.out",
       pin: true,
       scrub: true,
+    });
+
+    //TILT EFFECT
+    const cover = document.querySelectorAll(".cover");
+
+    VanillaTilt.init(cover, {
+      reverse: true,
+      max: 10,
+      speed: 800,
+      perspective: 1000,
+      glare: false,
+    });
+    const tongScene = document.querySelectorAll(".tong-scene");
+
+    VanillaTilt.init(tongScene, {
+      reverse: true,
+      max: 10,
+      speed: 800,
+      perspective: 1000,
+      glare: false,
     });
   }, 1000);
 });
