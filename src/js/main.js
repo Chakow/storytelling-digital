@@ -358,14 +358,13 @@ document.addEventListener("DOMContentLoaded", function () {
         trigger: ".third-part",
 
         start: "top top",
-        end: "500%",
         pin: true,
         scrub: true,
       },
     });
     timelineThirdPart.to(".second-image-third-part", {
       x: "-5%",
-      duration: 0.5,
+      duration: 1,
     });
 
     //BUY PART ANIMATION
@@ -373,11 +372,13 @@ document.addEventListener("DOMContentLoaded", function () {
       scrollTrigger: {
         trigger: ".buy-part",
         start: "bottom bottom",
+        end: "50%",
         pin: true,
       },
     });
     timelineBuyPart.to(".buy-button", {
       y: "0%",
+      duration: "0.5",
       pin: true,
     });
 
