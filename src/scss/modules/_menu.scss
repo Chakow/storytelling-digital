@@ -7,6 +7,10 @@
   padding-top: 45px;
   padding-left: 128px;
   padding-right: 128px;
+  transition: 0.4s;
+  &.hidden {
+    transform: translateY(-100%);
+  }
   .menu-first-part {
     display: flex;
     justify-content: center;

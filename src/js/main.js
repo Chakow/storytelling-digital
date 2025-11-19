@@ -338,18 +338,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var timelineBuyPart = gsap.timeline({
       scrollTrigger: {
         trigger: ".buy-part",
-
         start: "bottom bottom",
         pin: true,
-        scrub: true,
       },
     });
     timelineBuyPart.to(".buy-button", {
       y: "0%",
-      duration: 0.5,
-      ease: "power2.out",
       pin: true,
-      scrub: true,
     });
 
     //TILT EFFECT
@@ -436,6 +431,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
       sharp.style.maskImage = mask;
       sharp.style.webkitMaskImage = mask;
+    });
+    //disparition menu
+
+    var menu = document.querySelector(".menu");
+    window.addEventListener("scroll", function () {
+      var scrollHeight = document.documentElement.scrollHeight;
+      var scrollTop = window.scrollY + window.innerHeight;
+      if (scrollTop >= scrollHeight - 1220) {
+        menu.classList.add("hidden");
+      } else {
+        menu.classList.remove("hidden");
+      }
     });
   }, 1000);
 });
