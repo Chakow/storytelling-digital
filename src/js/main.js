@@ -23,12 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     //LIEN POUR ACHETER LA BD
+
     const buyButtonMenu = document.querySelector(".menu-buy-button");
 
     buyButtonMenu.addEventListener("click", () =>
       smoother.scrollTo("#buy-part", true, "top")
     );
-
     //TIMELINE FIRST PART
 
     var timelineFirstPart = gsap.timeline({
