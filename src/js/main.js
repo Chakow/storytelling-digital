@@ -8,6 +8,32 @@ import VanillaTilt from "vanilla-tilt";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
+//ROTATION LOADING IMAGE
+const speed = 3;
+
+function rotate() {
+  const el = document.querySelector(".loading-image");
+  let angle = 0;
+
+  function loop() {
+    angle = (angle + speed) % 360;
+    el.style.transform = `rotate(${angle}deg)`;
+    requestAnimationFrame(loop);
+  }
+
+  loop();
+}
+
+rotate();
+
+//OVERFLOW HIDDEN QUAND LA LOADING PAGE EST ACTIVE
+
+setInterval(() => {
+  const loading = document.querySelector(".loading-page");
+  document.body.style.overflow = loading ? "hidden" : "";
+}, 50);
+
+//APRES LOADING PAGE
 document.addEventListener("DOMContentLoaded", function () {
   setTimeout(function () {
     document.querySelector(".loading-page").remove();
@@ -17,8 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
-      smooth: 1.5, // inertie (= plus c’est haut, plus c’est doux)
-      smoothTouch: 0.1, // éviter l'effet trop glissant sur mobile
+      smooth: 1.5,
+      smoothTouch: 0.1,
       effects: true,
     });
 
@@ -47,6 +73,14 @@ document.addEventListener("DOMContentLoaded", function () {
       scale: 4.5,
       duration: 20,
     });
+    timelineFirstPart.to(
+      ".invitation-to-scroll",
+      {
+        y: "300%",
+        duration: 5,
+      },
+      "<"
+    );
     timelineFirstPart.to(".crevasse", {
       display: "none",
       duration: 0,
@@ -407,7 +441,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector(".blur-effect-container");
     const sharp = document.getElementById("sharp");
 
-    const radius = 170; // taille du cercle
+    const radius = 170;
 
     container.addEventListener("mousemove", (e) => {
       const rect = container.getBoundingClientRect();
@@ -444,5 +478,5 @@ document.addEventListener("DOMContentLoaded", function () {
         menu.classList.remove("hidden");
       }
     });
-  }, 1000);
+  }, 2000);
 });

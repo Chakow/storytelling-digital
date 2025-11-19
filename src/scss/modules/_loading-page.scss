@@ -1,8 +1,22 @@
 .loading-page {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100vw;
   height: 100vh;
-  background-color: red;
-  z-index: 1000;
+  background-color: black;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: white;
+  .loading-text {
+    position: fixed;
+    bottom: 20px;
+  }
+  img {
+    width: 15%;
+  }
 }
