@@ -41,8 +41,6 @@
     transform-style: preserve-3d;
     will-change: transform;
     display: flex;
-    // .image {
-    //   display: flex;
     .cover1 {
       width: 100%;
       transform: translateZ(10px);
@@ -57,7 +55,6 @@
       width: 100%;
       transform: translateZ(30px);
     }
-    // }
   }
   button {
     position: relative;

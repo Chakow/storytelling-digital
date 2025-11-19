@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
   setTimeout(function () {
     document.querySelector(".loading-page").remove();
 
+    //SCROLL SMOOTH
+
     const smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
@@ -19,6 +21,15 @@ document.addEventListener("DOMContentLoaded", function () {
       smoothTouch: 0.1, // éviter l'effet trop glissant sur mobile
       effects: true,
     });
+
+    //LIEN POUR ACHETER LA BD
+    const buyButtonMenu = document.querySelector(".menu-buy-button");
+
+    buyButtonMenu.addEventListener("click", () =>
+      smoother.scrollTo("#buy-part", true, "top")
+    );
+
+    //TIMELINE FIRST PART
 
     var timelineFirstPart = gsap.timeline({
       scrollTrigger: {
@@ -43,24 +54,24 @@ document.addEventListener("DOMContentLoaded", function () {
     //apparition titre
     timelineFirstPart.to(".crique", {
       y: "33%",
-      duration: 2,
+      duration: 4,
     });
     timelineFirstPart.to(".crique", {
       y: "33%",
-      duration: 2,
+      duration: 6,
     });
     //dsiparition crique et titre
     timelineFirstPart.to(".crique", {
       y: "100%",
       display: "none",
-      duration: 2,
+      duration: 4,
     });
     timelineFirstPart.to(
       "h1",
       {
         y: "-250%",
         display: "none",
-        duration: 2,
+        duration: 4,
       },
       "<"
     );
@@ -293,15 +304,15 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       "<"
     );
-    timelineSecondPart.to(".grave-image", {
+    timelineSecondPart.to(".blur-effect-container", {
       opacity: "1",
       duration: 2,
     });
-    timelineSecondPart.to(".grave-image", {
+    timelineSecondPart.to(".blur-effect-container", {
       opacity: "1",
       duration: 2,
     });
-    timelineSecondPart.to(".grave-image", {
+    timelineSecondPart.to(".blur-effect-container", {
       opacity: "0",
       duration: 2,
     });
@@ -397,5 +408,36 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       "<"
     );
+
+    //EFFET DE FLOU SUR IMAGE
+
+    const container = document.querySelector(".blur-effect-container");
+    const sharp = document.getElementById("sharp");
+
+    const radius = 170; // taille du cercle
+
+    container.addEventListener("mousemove", (e) => {
+      const rect = container.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const mask = `radial-gradient(circle ${radius}px at ${x}px ${y}px,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,1) 60%,
+    rgba(0,0,0,0) 100%)`;
+
+      sharp.style.maskImage = mask;
+      sharp.style.webkitMaskImage = mask;
+    });
+
+    container.addEventListener("mouseleave", () => {
+      const mask = `radial-gradient(circle 0px at 0 0,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,1) 60%,
+    rgba(0,0,0,0) 100%)`;
+
+      sharp.style.maskImage = mask;
+      sharp.style.webkitMaskImage = mask;
+    });
   }, 1000);
 });
