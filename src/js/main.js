@@ -360,5 +360,42 @@ document.addEventListener("DOMContentLoaded", function () {
       perspective: 1000,
       glare: false,
     });
+
+    //PARALLAXE EMOTION PART
+
+    var parallax = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".emotion-part",
+        markers: true,
+        id: "parallax",
+        start: "top bottom",
+        scrub: true,
+      },
+    });
+
+    parallax.to(
+      ".parallax-emotion-part-first-group",
+      {
+        y: "-700",
+        duration: 5,
+      },
+      "<"
+    );
+    parallax.to(
+      ".parallax-emotion-part-second-group",
+      {
+        y: "-500",
+        duration: 5,
+      },
+      "<"
+    );
+    parallax.to(
+      ".parallax-emotion-part-third-group",
+      {
+        y: "-100",
+        duration: 5,
+      },
+      "<"
+    );
   }, 1000);
 });
