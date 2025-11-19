@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var timelineFirstPart = gsap.timeline({
       scrollTrigger: {
         trigger: ".first-part",
-        markers: true,
+
         start: "top top",
         end: "2000%",
         pin: true,
@@ -283,7 +283,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var timelineSecondPart = gsap.timeline({
       scrollTrigger: {
         trigger: ".second-part",
-        markers: true,
+
         start: "bottom bottom",
         end: "500%",
         pin: true,
@@ -322,7 +322,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var timelineThirdPart = gsap.timeline({
       scrollTrigger: {
         trigger: ".third-part",
-        markers: true,
+
         start: "top top",
         end: "500%",
         pin: true,
@@ -338,7 +338,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var timelineBuyPart = gsap.timeline({
       scrollTrigger: {
         trigger: ".buy-part",
-        markers: true,
+
         start: "bottom bottom",
         pin: true,
         scrub: true,
@@ -374,17 +374,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //PARALLAXE EMOTION PART
 
-    var parallax = gsap.timeline({
+    var parallaxEmotion = gsap.timeline({
       scrollTrigger: {
         trigger: ".emotion-part",
-        markers: true,
-        id: "parallax",
         start: "top bottom",
         scrub: true,
       },
     });
 
-    parallax.to(
+    parallaxEmotion.to(
       ".parallax-emotion-part-first-group",
       {
         y: "-700",
@@ -392,7 +390,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       "<"
     );
-    parallax.to(
+    parallaxEmotion.to(
       ".parallax-emotion-part-second-group",
       {
         y: "-500",
@@ -400,7 +398,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       "<"
     );
-    parallax.to(
+    parallaxEmotion.to(
       ".parallax-emotion-part-third-group",
       {
         y: "-100",
