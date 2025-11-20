@@ -1,12 +1,18 @@
 //import
 import { gsap } from "gsap";
-
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 // ScrollSmoother requires ScrollTrigger
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import VanillaTilt from "vanilla-tilt";
-
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+//CUSTOM CURSOR
+import Cursor from "custom-cursor";
+
+const cursor = new Cursor({
+  count: 3,
+  targets: ["a", "button", ".interactive"],
+});
 
 //ROTATION LOADING IMAGE
 const speed = 2;

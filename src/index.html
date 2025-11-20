@@ -16,6 +16,19 @@
       rel="stylesheet"
     />
     <link rel="icon" href="img/favicon.svg" type="image/x-icon" />
+
+    <script
+      defer
+      src="https://unpkg.com/custom-cursor@latest/dist/cdn.min.js"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        new window["Cursor"]({
+          count: 3,
+          targets: ["a", "button", ".interactive"],
+        });
+      });
+    </script>
   </head>
   <body>
     <div class="loading-page">
