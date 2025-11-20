@@ -9,7 +9,7 @@ import VanillaTilt from "vanilla-tilt";
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 //ROTATION LOADING IMAGE
-const speed = 3;
+const speed = 2;
 
 function rotate() {
   const el = document.querySelector(".loading-image");
